@@ -1,0 +1,29 @@
+.button-primary {
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #1a1b1f;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-family: Plus Jakarta Sans, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  transition: all .2s;
+}
+
+.button-primary:hover {
+  color: #fff;
+  background-color: #32343a;
+}
+
+.button-primary:active {
+  background-color: #43464d;
+}
+
+.li {
+  list-style-type: none;
+}
+
+.ul {
+  list-style-type: none;
+}
