@@ -1,7 +1,6 @@
 class VehiclesController < ApplicationController
-  before_action :set_vehicle
+  before_action :set_vehicle, only: [:show]
   def show
-    @vehicles = set_vehicle
   end
 
   private
