@@ -5,6 +5,7 @@ class CreateVehicles < ActiveRecord::Migration[7.0]
       t.string :category
       t.string :driver_name
       t.integer :base_price
+      t.references :business, null: false, foreign_key: true
 
       t.timestamps
     end
