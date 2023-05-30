@@ -1,5 +1,5 @@
 class VehiclesController < ApplicationController
-  before_action :set_vehicle, only: [:show]
+  before_action :set_vehicle, only: %i[show edit update]
   def index
     @vehicles = Vehicle.all
   end
@@ -19,6 +19,17 @@ class VehiclesController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @vehicle.update(vehicle_params)
+      redirect_to vehicle_path(@vehicle)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
