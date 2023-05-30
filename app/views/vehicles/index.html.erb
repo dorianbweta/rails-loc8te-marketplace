@@ -1,0 +1,11 @@
+<h1>These are the vehicles</h1>
+
+<ul>
+  <% @vehicles.each do |vehicle| %>
+    <li>
+      <h2><%= vehicle.model %> driven by <%= vehicle.driver_name%></h2>
+      <p><%= vehicle.category %></p>
+      <p>Price: <%= vehicle.base_price %></p>
+    </li>
+  <% end %>
+</ul>
