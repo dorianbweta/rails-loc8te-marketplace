@@ -1,8 +1,26 @@
-<h1>Header</h1>
-<%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=" %>
-<ul>
-  <li><%= @vehicle.model %></li>
-  <li><%= @vehicle.category %></li>
-  <li><%= @vehicle.driver_name %></li>
-  <li><%= @vehicle.base_price %></li>
-</ul>
+<div class="container text-center">
+  <div class="car-body">
+    <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "main-car " %>
+    <div>
+      <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "top-car " %>
+      <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "bottom-car " %>
+    </div>
+  </div>
+  <div class="description">
+    <div class="car-details"></div>
+      <ul class="container mt-5">
+        <li class="list-styling"><%= @vehicle.model %></li>
+        <li class="list-styling"><%= @vehicle.category %></li>
+        <li class="list-styling"><%= @vehicle.driver_name %></li>
+        <li class="list-styling"><%= @vehicle.base_price %></li>
+      </ul>
+      <div class="car-features">
+      <ul>
+      </ul>
+      <li><h1>Additional Features</h1></li>
+      </div>
+  </div>
+
+</div>
+
+<%= render "shared/footer" %>

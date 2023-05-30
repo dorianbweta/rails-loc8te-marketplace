@@ -1,0 +1,18 @@
+.list-styling {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.car-body {
+  // display: flex;
+  height: 50vh;
+  width: 60vw;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 16px;
+}
+
+.description {
+  display: flex;
+}
