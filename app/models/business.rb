@@ -1,3 +1,4 @@
 class Business < ApplicationRecord
-  belongs_to :user_id
+  has_many :vehicles
+  belongs_to :user
 end
