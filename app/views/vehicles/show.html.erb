@@ -1,32 +1,28 @@
-<div class="container text-center">
-  <div class="car-body">
-    <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "main-car " %>
-    <div>
-      <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "top-car " %>
-      <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "bottom-car " %>
+
+  <div class="container">
+    <div class="car-body">
+      <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "main-car " %>
+      <div>
+        <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "top-car " %>
+        <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "bottom-car " %>
+      </div>
     </div>
-  </div>
-  <div class="description">
-    <div class="car-details"></div>
-      <ul class="container mt-5">
-        <li class="list-styling"><%= @vehicle.model %></li>
-        <li class="list-styling"><%= @vehicle.category %></li>
-        <li class="list-styling"><%= @vehicle.driver_name %></li>
-        <li class="list-styling"><%= @vehicle.base_price %></li>
+    <div class="car-details">
+      <ul>
+        <li class="list-styling">Model: <%= @vehicle.model %></li>
+        <li class="list-styling">Category: <%= @vehicle.category %></li>
+        <li class="list-styling">Driver: <%= @vehicle.driver_name %></li>
+        <li class="list-styling">Price<%= @vehicle.base_price %></li>
       </ul>
       <div class="car-features">
-      <ul>
-      </ul>
-      <h1>Additional Features</h1>
-      <div class="feat">
-        <ul>
-          <li>thing 1</li>
-          <li>thing 2</li>
+        <h1>Additional Features</h1>
+        <div class="feat">
+          <ul class="list-styling">
+            <li>thing 1</li>
+            <li>thing 2</li>
+            <li>thing 3</li>
+          </ul>
+        </div>
       </div>
-          <li>thing 3</li>
-        </ul>
+    </div>
   </div>
-
-</div>
-
-<%= render "shared/footer" %>
