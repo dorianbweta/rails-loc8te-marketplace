@@ -8,18 +8,21 @@
   </div>
   <div class="car-details">
     <ul>
-      <li class="list-styling">Model: <%= @vehicle.model %></li>
-      <li class="list-styling">Category: <%= @vehicle.category %></li>
+      <li class="list-styling"><h1><%= @vehicle.model.capitalize %></h1></li>
       <li class="list-styling">Driver: <%= @vehicle.driver_name %></li>
-      <li class="list-styling">Price<%= @vehicle.base_price %></li>
+      <li class="list-styling">Category: <%= @vehicle.category %></li>
+      <li class="list-styling">Price: <%= @vehicle.base_price %></li>
     </ul>
+    <div class="car-description">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cumque quasi illo tempora molestiae libero quas praesentium qui excepturi unde, ipsum delectus consequuntur amet dicta vero sunt accusantium nihil voluptas!</p>
+    </div>
     <div class="car-features">
       <h1>Additional Features</h1>
       <div class="feat">
-        <ul class="feature-styling">
-          <li>thing 1</li>
-          <li>thing 2</li>
-          <li>thing 3</li>
+        <ul class="feature-styling list-group list-group-flush">
+          <li class="list-group-item">Music</li>
+          <li class="list-group-item">Cupholders</li>
+          <li class="list-group-item">USB</li>
         </ul>
       </div>
     </div>

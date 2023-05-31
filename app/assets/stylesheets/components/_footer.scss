@@ -1,5 +1,4 @@
 .footer {
-  background: #F4F4F4;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -31,4 +30,8 @@
   color: whitesmoke;
   display: flex;
   justify-self: center;
+}
+
+body {
+  margin-bottom: 100px;
 }

@@ -21,10 +21,6 @@ width: 100%;
   grid-gap: 16px;
 }
 
-.feat {
-  display: flex;
-}
-
 .car-details {
   display: flex;
   width: 60vw;
@@ -33,4 +29,8 @@ width: 100%;
   ul {
     padding: 0;
   }
+}
+.car-description {
+  width: 30vw;
+  padding: 20px;
 }
