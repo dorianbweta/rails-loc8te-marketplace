@@ -1,0 +1,23 @@
+.button-primary {
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #1a1b1f;
+  border-radius: 5px;
+  padding: 12px 30px;
+  font-family: Plus Jakarta Sans, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  margin-left: 0px;
+}
+
+.button-primary:hover {
+  color: #fff;
+  background-color: #FCA311;
+}
+
+.button-primary:active {
+  background-color: #43464d;
+}
