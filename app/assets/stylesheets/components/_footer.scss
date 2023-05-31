@@ -1,16 +1,13 @@
 .footer {
-  background: #F4F4F4;
   display: flex;
   align-items: center;
   flex-direction: column;
   height: 70px;
-  padding: 0px 20px;
-  margin: 0px 10px;
+  padding: 7px 20px;
   background-color: #14213d;
   position: fixed;
   bottom: 0;
   width: 100%;
-  margin: 0;
 }
 .footer-links {
   display: flex;
@@ -31,4 +28,8 @@
   color: whitesmoke;
   display: flex;
   justify-self: center;
+}
+
+body {
+  margin-bottom: 100px;
 }
