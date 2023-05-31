@@ -1,4 +1,5 @@
 class VehiclesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_vehicle, only: %i[show edit update]
   def index
     @vehicles = Vehicle.all
@@ -41,4 +42,5 @@ class VehiclesController < ApplicationController
   def vehicle_params
     params.require(:vehicle).permit(:model, :category, :driver_name, :base_price)
   end
+
 end

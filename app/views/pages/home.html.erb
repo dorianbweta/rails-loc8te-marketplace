@@ -10,7 +10,7 @@
         <%= link_to "Submit your Vehicle", new_vehicle_path, class:"nav-links"%>
         </li>
         <li>
-        <%= link_to "Log out", destroy_user_session_path, class:"nav-links"%>
+        <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class:"nav-links"%>
         </li>
       </ul>
       <%= link_to "Sign up", new_user_registration_path, class: "button-primary"%>
