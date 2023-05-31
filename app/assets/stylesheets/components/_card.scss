@@ -20,10 +20,8 @@
 }
 
 .cards-container {
-  background-color: #272727;
-  box-shadow: 0 0 4px ;
+  background-color: #c6c4c4;
   border-radius: 5px;
-  border:  solid black 1px;
   animation: ease-out;
   transition: 0.7s;
 
@@ -35,7 +33,7 @@
   }
 
   h2 {
-    color: $green;
+    color: black;
   }
 
   p, a, i {
