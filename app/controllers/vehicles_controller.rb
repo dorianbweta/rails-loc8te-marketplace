@@ -1,5 +1,6 @@
 class VehiclesController < ApplicationController
-  before_action :set_vehicle, only: [:show]
+  skip_before_action :authenticate_user!, only: [:index]
+  before_action :set_vehicle, only: %i[show edit update]
   def index
     @vehicles = Vehicle.all
   end
@@ -21,6 +22,17 @@ class VehiclesController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @vehicle.update(vehicle_params)
+      redirect_to vehicle_path(@vehicle)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def set_vehicle
@@ -30,4 +42,5 @@ class VehiclesController < ApplicationController
   def vehicle_params
     params.require(:vehicle).permit(:model, :category, :driver_name, :base_price)
   end
+
 end
