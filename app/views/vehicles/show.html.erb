@@ -19,15 +19,15 @@
   <div class="d-flex align-items-center justify-content-between">
     <div class="d-flex flex-row align-items-center">
       <i class="fa-solid fa-car" style="color: $dark-blue"></i>
-      <span>Category: <%= @vehicle.category %></span>
+      <span>Category: <strong style="color: orange"><%= @vehicle.category %></strong></span>
     </div>
     <div class="d-flex align-items-center justify-content-between">
       <i class="fa-solid fa-id-card" style="color: $dark-blue"></i>
-      <span>  Driver: <%= @vehicle.driver_name %></span>
+      <span>  Driver: <strong style="color: orange"><%= @vehicle.driver_name %></strong></span>
     </div>
     <div class="d-flex align-items-center justify-content-between">
       <i class="fa-solid fa-money-bill" style="color: $dark-blue"></i>
-      <span>  Price: <%= @vehicle.base_price%></span>
+      <span>  Price: <strong style="color: orange"><%= @vehicle.base_price%></strong></span>
     </div>
   </div>
 
