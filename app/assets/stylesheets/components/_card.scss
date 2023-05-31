@@ -1,7 +1,9 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 24px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .card-category {
@@ -26,7 +28,7 @@
   transition: 0.7s;
 
   &:hover {
-    box-shadow: 0 0 10px $green;
+    box-shadow: 0 0 10px $light-gray;
     scale: 1.05;
     animation: ease;
     transition: 0.7s;
@@ -51,4 +53,8 @@
   justify-content: space-between;
   border-radius: 5px;
   padding: 0px 20px;
+}
+
+.ul, li {
+  list-style-type: none;
 }
