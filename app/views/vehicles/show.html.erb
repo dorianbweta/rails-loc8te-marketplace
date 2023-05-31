@@ -14,7 +14,7 @@
 
   <h3> Find below all the information about this vehicle </h2>
   <p>
-    This <%= @vehicle.model.downcase %> is offered for rent by <%= @vehicle.business.organisation_name %>
+    This <strong style="color: orange"><%= @vehicle.model.capitalize %></strong> is offered for rent by <strong style="color: orange"><%= @vehicle.business.organisation_name %></strong>
   </p>
   <div class="d-flex align-items-center justify-content-between">
     <div class="d-flex flex-row align-items-center">
