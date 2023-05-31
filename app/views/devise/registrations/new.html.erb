@@ -1,17 +1,4 @@
-<div class="navbar-container">
-  <img class="logo" src="https://i.imgur.com/uU7W34t.png" alt="LOC8TE logo">
-    <div class="navbar">
-      <ul class="nav-links">
-        <li>
-        <%= link_to "Vehicles", vehicles_path, class:"nav-links"%>
-        </li>
-        <li>
-        <%= link_to "Submit your Vehicle", new_vehicle_path, class:"nav-links"%>
-        </li>
-      </ul>
-      <%= link_to "Sign up", new_user_registration_path, class: "button-primary" %>
-    </div>
-</div>
+<%= render "shared/navbar" %>
 
 <div class="container my-4">
   <div class="form-info">
