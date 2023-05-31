@@ -5,6 +5,7 @@
   <%= f.input :category %>
   <%= f.input :driver_name %>
   <%= f.input :base_price %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Edit", class: "btn btn-primary" %>
 <% end %>
 
