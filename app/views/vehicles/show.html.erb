@@ -1,52 +1,46 @@
-<div class="navbar-container">
-  <div class="logo">
-  <%= link_to root_path do %>
-    <img class="logo" src="https://i.imgur.com/uU7W34t.png" alt="LOC8TE logo">
-  <% end %>
-  </div>
-    <div class="navbar">
-      <ul class="nav-links">
-        <li>
-        <%= link_to "Vehicles", vehicles_path, class:"nav-links"%>
-        </li>
-        <li>
-        <%= link_to "Submit your Vehicle", new_vehicle_path, class:"nav-links"%>
-        </li>
-        <li>
-        <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class:"nav-links"%>
-        </li>
-      </ul>
-      <%= link_to "Sign up", new_user_registration_path, class: "button-primary"%>
-    </div>
-</div>
-
 <div class="container">
-  <div class="car-body">
-    <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "main-car " %>
-    <div>
-      <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "top-car " %>
-      <%= image_tag "https://media.istockphoto.com/id/1148853697/photo/3d-illustration-of-generic-compact-car-perspective-view.jpg?s=612x612&w=0&k=20&c=Hjp7XIILGWEvy5swlNoYAAAn9azvjeiU9L0R5CT5q9M=", class: "bottom-car " %>
+
+  <div class="row">
+    <div class="col-8">
+      <%= image_tag "https://res.cloudinary.com/dusf3yrhs/image/upload/v1685515199/upjek5ki6bet05xxgtfp.jpg", class: "main-car "%>
+    </div>
+    <div class="col-4">
+      <%= image_tag "https://res.cloudinary.com/dusf3yrhs/image/upload/v1685515343/yz2prfacwo0ubjhkm3x4.jpg", class: "top-car " %>
+        <%= image_tag "https://res.cloudinary.com/dusf3yrhs/image/upload/v1685515266/b8tux5ufeuztuzdd5ppg.jpg", class: "bottom-car " %>
     </div>
   </div>
-  <div class="car-details">
-    <ul>
-      <li class="list-styling"><h1><%= @vehicle.model.capitalize %></h1></li>
-      <li class="list-styling">Driver: <%= @vehicle.driver_name %></li>
-      <li class="list-styling">Category: <%= @vehicle.category %></li>
-      <li class="list-styling">Price: <%= @vehicle.base_price %></li>
-    </ul>
-    <div class="car-description">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cumque quasi illo tempora molestiae libero quas praesentium qui excepturi unde, ipsum delectus consequuntur amet dicta vero sunt accusantium nihil voluptas!</p>
+
+  <hr>
+
+  <h3> Find below all the information about this vehicle </h2>
+  <p>
+    This <%= @vehicle.model.downcase %> is offered for rent by <%= @vehicle.business.organisation_name %>
+  </p>
+  <div class="d-flex align-items-center justify-content-between">
+    <div class="d-flex flex-row align-items-center">
+      <i class="fa-solid fa-car" style="color: $dark-blue"></i>
+      <span>Category: <%= @vehicle.category %></span>
     </div>
-    <div class="car-features">
-      <h1>Additional Features</h1>
-      <div class="feat">
-        <ul class="feature-styling list-group list-group-flush">
-          <li class="list-group-item">Music</li>
-          <li class="list-group-item">Cupholders</li>
-          <li class="list-group-item">USB</li>
-        </ul>
-      </div>
+    <div class="d-flex align-items-center justify-content-between">
+      <i class="fa-solid fa-id-card" style="color: $dark-blue"></i>
+      <span>  Driver: <%= @vehicle.driver_name %></span>
+    </div>
+    <div class="d-flex align-items-center justify-content-between">
+      <i class="fa-solid fa-money-bill" style="color: $dark-blue"></i>
+      <span>  Price: <%= @vehicle.base_price%></span>
     </div>
   </div>
+
+  <hr>
+
+  <div class="d-flex align-items-center justify-content-between mt-3 mb-3">
+    <%= link_to "See all vehicles", vehicles_path, class: "button-primary" %>
+    <%= link_to "Book now", '#', class: "button-primary" %>
+    <%= link_to "Delete",
+        '#',
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+        class: "button-primary"
+    %>
+  </div>
+
 </div>
