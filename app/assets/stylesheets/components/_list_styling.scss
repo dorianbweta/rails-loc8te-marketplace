@@ -5,6 +5,13 @@
   justify-content: space-between;
 }
 
+.feature-styling {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+width: 100%;
+}
+
 .car-body {
   // display: flex;
   height: 100%;
