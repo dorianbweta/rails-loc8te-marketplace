@@ -70,10 +70,10 @@
           <% if request.status.downcase == "pending" %>
             <div class="d-flex">
               <%=
-              button_to "✅", request_path(request.id, status: "Accepted"), method: :patch, class: "accept_decline_button"
+              button_to "✅", booking_path(request.id, status: "Accepted"), method: :patch, class: "accept_decline_button"
               %>
               <%=
-                button_to "❌", request_path(request.id, status: "Declined"), method: :patch, class: "accept_decline_button"
+                button_to "❌", booking_path(request.id, status: "Declined"), method: :patch, class: "accept_decline_button"
               %>
             </div>
           <% else %>
