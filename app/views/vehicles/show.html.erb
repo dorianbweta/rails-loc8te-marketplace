@@ -2,11 +2,11 @@
 
   <div class="row">
     <div class="col-8">
-      <%= image_tag "https://res.cloudinary.com/dusf3yrhs/image/upload/v1685515199/upjek5ki6bet05xxgtfp.jpg", class: "main-car "%>
+      <%= image_tag(cl_image_path(@vehicle.photos.first.key), class: "main-car") %>
     </div>
     <div class="col-4">
-      <%= image_tag "https://res.cloudinary.com/dusf3yrhs/image/upload/v1685515343/yz2prfacwo0ubjhkm3x4.jpg", class: "top-car " %>
-        <%= image_tag "https://res.cloudinary.com/dusf3yrhs/image/upload/v1685515266/b8tux5ufeuztuzdd5ppg.jpg", class: "bottom-car " %>
+      <%= image_tag(cl_image_path(@vehicle.photos.second.key), class: "top-car") %>
+        <%= image_tag(cl_image_path(@vehicle.photos.last.key), class: "bottom-car") %>
     </div>
   </div>
 
