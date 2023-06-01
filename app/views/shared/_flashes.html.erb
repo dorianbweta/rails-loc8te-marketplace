@@ -1,0 +1,29 @@
+<% if notice %>
+  <div id="notice-alert" class="alert alert-info alert-dismissible fade show m-1" role="alert">
+    <%= notice %>
+  </div>
+<% end %>
+<% if alert %>
+  <div id="alert-alert" class="alert alert-warning alert-dismissible fade show m-1" role="alert">
+    <%= alert %>
+  </div>
+<% end %>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var noticeAlert = $('#notice-alert');
+    if (noticeAlert.length) {
+      setTimeout(function() {
+        noticeAlert.fadeOut();
+      }, 2000);
+    }
+
+    var alertAlert = $('#alert-alert');
+    if (alertAlert.length) {
+      setTimeout(function() {
+        alertAlert.fadeOut();
+      }, 2000);
+    }
+  });
+</script>
