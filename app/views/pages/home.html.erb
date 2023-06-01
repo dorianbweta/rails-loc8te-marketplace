@@ -5,15 +5,79 @@
 </div>
 
 <div class="container">
-  <div class="d-flex align-items-center justify-content-center my-3">
-    <h2>Choose from our selection of vehicles </h2>
+  <div class="container text-center my-3">
+    <h2>Choose from our selection of vehicles</h2>
     <hr>
+      <div class="row mx-auto my-auto justify-content-center">
+          <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                      <div class="col-md-3">
+                          <div class="card">
+                              <div class="card-img">
+                                  <img src="https://images.unsplash.com/photo-1661281812258-129793403c61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="col-md-3">
+                          <div class="card">
+                              <div class="card-img">
+                                  <img src="https://blog-media.lifepal.co.id/app/uploads/sites/3/2021/08/16165057/Toyota-Alphard.jpg" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="col-md-3">
+                          <div class="card">
+                              <div class="card-img">
+                                  <img src="https://images.unsplash.com/photo-1546933751-22670568bacf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="col-md-3">
+                          <div class="card">
+                              <div class="card-img">
+                                  <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="col-md-3">
+                          <div class="card">
+                              <div class="card-img">
+                                  <img src="https://www.pensketruckrental.com/media-library/penske-heavy-duty-truck-driving-over-bridge.jpg?id=31291376&width=1245&height=700&quality=85&coordinates=370%2C579%2C1103%2C520" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="col-md-3">
+                          <div class="card">
+                              <div class="card-img">
+                                  <img src="https://cdn.motor1.com/images/mgl/8Qv7P/s3/volkner-mobil-performance---trequarti-anteriore-garage-aperto.webp" class="img-fluid">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+          </div>
+      </div>
   </div>
-  <div class="image-grid">
-    <img src="https://images.unsplash.com/photo-1661281812258-129793403c61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="">
-    <img src="https://images.unsplash.com/photo-1661281812258-129793403c61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="">
-    <img src="https://images.unsplash.com/photo-1661281812258-129793403c61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="">
-  </div>
+
+
+
   <div class="d-flex align-items-center justify-content-center my-3">
     <%= link_to "View all", vehicles_path, class: "button-primary"%>
   </div>

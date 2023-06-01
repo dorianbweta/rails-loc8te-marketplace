@@ -17,6 +17,16 @@
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
+  animation: ease-out;
+  transition: 0.7s;
+  object-position: center;
+
+  &:hover {
+    box-shadow: 0 0 10px $light-gray;
+    scale: 1.05;
+    animation: ease;
+    transition: 0
+  }
 }
 
 .main-page {
@@ -25,4 +35,48 @@
 
 ul {
   margin-bottom: 0rem;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+transform: translateX(0);
+}
+
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
 }
