@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_one :business
   has_many :bookings
+  has_many :vehicles, through: :business
 end
