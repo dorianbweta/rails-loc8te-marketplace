@@ -3,18 +3,21 @@
     <div class="d-flex align-items-center justify-content-center my-3">
     <h1>Submit your vehicle</h1>
     </div>
+
     <hr>
-    <img class="logo-icon" src="https://i.imgur.com/sVXVLFP.png" alt="">
+
     <%= simple_form_for [@vehicle] do |f| %>
-      <%= f.input :model %>
-      <%= f.input :category %>
-      <%= f.input :driver_name %>
-      <%= f.input :base_price %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.input :model, input_html: { class: "w-100" } %>
+      <%= f.input :category, input_html: { class: "w-100" } %>
+      <%= f.input :driver_name, input_html: { class: "w-100" } %>
+      <%= f.input :base_price, input_html: { class: "w-100" } %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true, class: "w-100" } %>
       <div class="d-flex align-items-center justify-content-center my-3">
         <%= f.submit "Create", class: "button-primary" %>
       </div>
     <% end %>
-    <p><%= link_to "See all vehicles", vehicles_path %></p>
+    <div class="d-flex align-items-center justify-content-center">
+      <p><%= link_to "See all vehicles", vehicles_path %></p>
+    </div>
   </div>
 </div>
