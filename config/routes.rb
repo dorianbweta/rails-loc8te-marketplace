@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/vehicles', to: 'vehicles#index'
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :businesses, only: [:index]
 end
