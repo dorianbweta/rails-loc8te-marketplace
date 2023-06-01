@@ -1,7 +1,7 @@
 <div class="navbar-container">
   <div class="logo">
   <%= link_to root_path do %>
-    <%= image_tag "logo.png", alt: "Logo", class:"logo" %>
+    <%= image_tag "logo-white.png", alt: "Logo", class:"logo" %>
   <% end %>
   </div>
     <div class="navbar">
@@ -22,6 +22,6 @@
         <% end %>
         </li>
       </ul>
-      <%= link_to "Sign up", new_user_registration_path, class: "button-primary"%>
+      <%= link_to "Log in", new_user_session_path, class: "navbar-button"%>
     </div>
 </div>
