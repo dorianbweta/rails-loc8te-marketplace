@@ -1,11 +1,3 @@
-.navbar {
-  height: 60px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 4px 20px;
-  display: flex;
-}
-
 .navbar-container {
   width: auto;
   height: 60px;
@@ -17,18 +9,28 @@
   margin-right: auto;
   padding: 4px 20px;
   display: flex;
+  background-color: $dark-blue;
+}
+
+.navbar {
+  display: flex;
 }
 
 .nav-links {
   list-style-type: none;
   text-decoration: none;
   display: inline-block;
-  color: black;
+  color: white;
+  font-family: Plus Jakarta Sans, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+
 }
 
 .nav-links li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 10px 20px;
   align-items: center;
 }
 
@@ -41,7 +43,7 @@
 }
 
 .logo {
-  width: 100px;
+  width: 150px;
   height: auto;
   padding: 0px;
   margin-right: auto;

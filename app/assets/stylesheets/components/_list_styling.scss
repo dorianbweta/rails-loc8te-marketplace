@@ -1,36 +1,36 @@
-.list-styling {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+// .list-styling {
+//   list-style: none;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+// }
 
-.feature-styling {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 10px;
-width: 100%;
-}
+// .feature-styling {
+// display: grid;
+// grid-template-columns: 1fr 1fr;
+// gap: 10px;
+// width: 100%;
+// }
 
-.car-body {
-  // display: flex;
-  height: 100%;
-  width: 60vw;
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-gap: 16px;
-}
+// .car-body {
+//   // display: flex;
+//   height: 100%;
+//   width: 60vw;
+//   display: grid;
+//   grid-template-columns: 3fr 2fr;
+//   grid-gap: 16px;
+// }
 
-.feat {
-  display: flex;
-}
-
-.car-details {
-  display: flex;
-  width: 60vw;
-  justify-content: space-between;
-  margin-top: 20px;
-  ul {
-    padding: 0;
-  }
-}
+// .car-details {
+//   display: flex;
+//   width: 60vw;
+//   justify-content: space-between;
+//   margin-top: 20px;
+//   ul {
+//     padding: 0;
+//   }
+// }
+// .car-description {
+//   width: 30vw;
+//   padding: 20px;
+// }

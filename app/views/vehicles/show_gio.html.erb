@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="car-body">
+    <%= image_tag "https://res.cloudinary.com/dusf3yrhs/image/upload/v1685515199/upjek5ki6bet05xxgtfp.jpg", class: "main-car " %>
+    <div>
+      <%= image_tag "https://res.cloudinary.com/dusf3yrhs/image/upload/v1685515343/yz2prfacwo0ubjhkm3x4.jpg", class: "top-car " %>
+      <%= image_tag "https://res.cloudinary.com/dusf3yrhs/image/upload/v1685515266/b8tux5ufeuztuzdd5ppg.jpg", class: "bottom-car " %>
+    </div>
+  </div>
+  <div class="car-details">
+    <ul>
+      <li class="list-styling"><h1><%= @vehicle.model.capitalize %></h1></li>
+      <li class="list-styling">Driver: <%= @vehicle.driver_name %></li>
+      <li class="list-styling">Category: <%= @vehicle.category %></li>
+      <li class="list-styling">Price: <%= @vehicle.base_price %></li>
+    </ul>
+    <div class="car-description">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cumque quasi illo tempora molestiae libero quas praesentium qui excepturi unde, ipsum delectus consequuntur amet dicta vero sunt accusantium nihil voluptas!</p>
+    </div>
+    <div class="car-features">
+      <h1>Additional Features</h1>
+      <div class="feat">
+        <ul class="feature-styling list-group list-group-flush">
+          <li class="list-group-item">Music</li>
+          <li class="list-group-item">Cupholders</li>
+          <li class="list-group-item">USB</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

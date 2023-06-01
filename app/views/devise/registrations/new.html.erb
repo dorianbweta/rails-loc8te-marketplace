@@ -1,25 +1,10 @@
-<div class="navbar-container">
-  <img class="logo" src="https://i.imgur.com/uU7W34t.png" alt="LOC8TE logo">
-    <div class="navbar">
-      <ul class="nav-links">
-        <li>
-        <%= link_to "Vehicles", vehicles_path, class:"nav-links"%>
-        </li>
-        <li>
-        <%= link_to "Submit your Vehicle", new_vehicle_path, class:"nav-links"%>
-        </li>
-      </ul>
-      <%= link_to "Sign up", new_user_registration_path, class: "button-primary" %>
-    </div>
-</div>
-
 <div class="container my-4">
-  <div class="form-info"></div>
+  <div class="form-info">
     <div class="d-flex align-items-center justify-content-center my-3">
       <h1>Sign up</h1>
     </div>
     <hr>
-    <img class="logo-icon" src="https://i.imgur.com/sVXVLFP.png" alt="">
+
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
@@ -46,11 +31,12 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Sign up" %>
+        <%= f.button :submit, "Sign up", class:"button-primary"%>
       </div>
       <% end %>
 
-      <%= render "devise/shared/links" %>
+      <div class="form-actions">
+        <%= render "devise/shared/links" %>
       </div>
   </div>
 </div>

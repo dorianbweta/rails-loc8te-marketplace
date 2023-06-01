@@ -3,6 +3,13 @@ class VehiclesController < ApplicationController
   before_action :set_vehicle, only: %i[show edit update]
   def index
     @vehicles = Vehicle.all
+    if params[:query].present?
+      sql_subquery = <<~SQL
+        vehicles.model @@ :query
+        OR vehicles.category @@ :query
+      SQL
+      @vehicles = @vehicles.where(sql_subquery, query: params[:query])
+    end
   end
 
   def new
