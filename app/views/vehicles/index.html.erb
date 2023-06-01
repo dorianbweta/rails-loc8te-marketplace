@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center justify-content-center my-3">
-  <h1>Vehicles currently Available</h1>
+  <h1>Vehicles Currently Available</h1>
 </div>
 
 <div class="cards">
@@ -9,7 +9,7 @@
             </div>
           <li>
           <div class="card-description my-2">
-            <h2><%= vehicle.model %></h2>
+            <h2><%= link_to vehicle.model, vehicle_path(vehicle), class:"text-decoration-none text-black" %></h2>
           </div>
 
           <div class="card-description d-flex">
