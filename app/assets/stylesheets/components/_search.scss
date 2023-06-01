@@ -1,6 +1,12 @@
 .form-control {
   width: 60%;
-  height: 40px;
   align-items: center;
   display: flex;
+}
+
+.search-bar {
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  height: 10px
 }
