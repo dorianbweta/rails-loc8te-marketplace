@@ -2,7 +2,7 @@
   color: #fff;
   letter-spacing: 2px;
   text-transform: uppercase;
-  background-color: #1a1b1f;
+  background-color: $orange;
   border-radius: 5px;
   padding: 12px 30px;
   font-family: Plus Jakarta Sans, sans-serif;
@@ -15,7 +15,7 @@
 
 .button-primary:hover {
   color: #fff;
-  background-color: #FCA311;
+  background-color: $black;
 }
 
 .button-primary:active {
