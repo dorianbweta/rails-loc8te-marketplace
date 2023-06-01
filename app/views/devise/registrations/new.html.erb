@@ -4,7 +4,7 @@
       <h1>Sign up</h1>
     </div>
     <hr>
-    <img class="logo-icon" src="https://i.imgur.com/sVXVLFP.png" alt="">
+
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
@@ -35,7 +35,8 @@
       </div>
       <% end %>
 
-      <%= render "devise/shared/links" %>
+      <div class="form-actions">
+        <%= render "devise/shared/links" %>
       </div>
   </div>
 </div>
