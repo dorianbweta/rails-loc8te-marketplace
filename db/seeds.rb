@@ -37,17 +37,20 @@ puts 'Creating businesses...'
 Business.create!(
   organisation_name: 'Deloitte',
   tax_number: 849,
-  user: User.first
+  user: User.first,
+  address: "New York, NY 10004, United States"
 )
 Business.create!(
   organisation_name: 'Sika',
   tax_number: 444,
-  user: User.second
+  user: User.second,
+  address: "17130 TX-46, Texas 78070, United States"
 )
 Business.create!(
   organisation_name: 'Tour',
   tax_number: 287,
-  user: User.third
+  user: User.third,
+  address: "9221 Lake Hefner Pkwy, Oklahoma City, OK 73120, United States"
 )
 puts 'Finished creation of businesses...'
 
