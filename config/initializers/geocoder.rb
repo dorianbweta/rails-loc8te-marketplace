@@ -24,4 +24,5 @@ Geocoder.configure(
   #   expiration: 2.days,
   #   prefix: 'geocoder:'
   # }
+  units: :km
 )
