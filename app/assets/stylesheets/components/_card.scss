@@ -18,6 +18,7 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 5px;
 }
 
 .cards-container {
@@ -25,6 +26,7 @@
   border-radius: 0px;
   animation: ease-out;
   transition: 0.7s;
+  border-radius: 5px;
 
   &:hover {
     box-shadow: 0 0 10px $light-gray;
@@ -49,6 +51,7 @@
 .card-description {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 5px;
   padding: 0px 20px;
 }
