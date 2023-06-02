@@ -6,7 +6,8 @@ class BusinessesController < ApplicationController
       {
         lat: business.latitude,
         lng: business.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: {business: business})
+        info_window_html: render_to_string(partial: "info_window", locals: {business: business}),
+        marker_html: render_to_string(partial: "marker")
       }
     end
   end
