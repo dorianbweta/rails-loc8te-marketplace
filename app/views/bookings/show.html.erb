@@ -1,0 +1,41 @@
+<div class="full-page">
+  <div class="container">
+    <div class="text-center justify-content-center my-3">
+      <h1>
+        Thank you
+        <strong style="color: orange"><%= @booking.user.first_name %></strong>
+        <strong style="color: orange"><%= @booking.user.last_name %></strong>
+        for riding with us!
+      </h1>
+      <p>Your request has been correctly submitted and payment information accepted. </p><br>
+      <p><strong>Here are your booking details:</strong></p>
+    </div>
+
+    <hr>
+  </div>
+    <div class=booking-page-image>
+      <%= image_tag(cl_image_path(@booking.vehicle.photos.first.key), class: "main-car myImg", style: "border-radius: 5px") %>
+    </div>
+  <div class="container">
+    <div class="booking-card">
+      <ul>
+        <li>Your vehicle will be a
+        <a href="<%= vehicle_path(@booking.vehicle) %>" id="vehicle-link">
+          <strong style="color: orange">
+          <%= @booking.vehicle.category %>
+          <%= @booking.vehicle.model %>
+          </strong> </a> driven by
+        <strong style="color: orange"><%= @booking.vehicle.driver_name %></strong>.
+        </li>
+        <li>Start Date: <strong style="color: orange"><%= @booking.start_date %></strong>.</li>
+        <li>End Date: <strong style="color: orange"><%= @booking.end_date %></strong>.</li>
+        <li>Total Price: <strong style="color: orange">$<%= @booking.total_price %></strong> for <strong style="color: orange"><%= (@booking.end_date - @booking.start_date).to_i %></strong> days.</li>
+        <li>Status: <strong style="color: orange"><%= @booking.status %></strong>.</li>
+      </ul>
+    </div>
+    <div class="text-center justify-content-center my-3">
+      <p>You will be notified via email once your driver accepts your booking.</p><br>
+      <p>We hope you enjoy your ride and look forward to serving you again in the future! </p><br>
+    </div>
+  </div>
+</div>

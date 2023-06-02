@@ -6,10 +6,10 @@
   <div class="col-sm-8 my-3">
     <%= form_with url: vehicles_path, method: :get, class: "d-flex justify-content-center" do %>
       <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Search a vehicle "
-        %>
+          params[:query],
+          class: "form-control",
+          placeholder: "Search a vehicle "
+      %>
       <%= submit_tag "Search", name: "", class: "button-primary" %>
     <% end %>
   </div>
@@ -23,19 +23,21 @@
     <% @vehicles.each do |vehicle| %>
         <div class="cards-container">
         <% if vehicle.photos.attached? %>
-          <div class="card-category" style="background-image: url('<%= cl_image_path vehicle.photos.first.key %>')">
-          </div>
+          <a href="<%= vehicle_path(vehicle) %>">
+           <div class="card-category" style="background-image: url('<%= cl_image_path(vehicle.photos.first.key) %>')">
+           </div>
+          </a>
           <% else %>
             <div class="card-category" style="background-image: url('https://images.unsplash.com/photo-1622893288761-823ba60f17a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1856&q=80')">
           </div>
           <% end %>
           <li>
           <div class="card-description my-2">
-            <h2><%= link_to vehicle.model, vehicle_path(vehicle), class:"text-decoration-none text-black" %></h2>
+            <h2><%= link_to vehicle.model.titleize, vehicle_path(vehicle), class:"text-decoration-none text-black" %></h2>
           </div>
 
           <div class="card-description d-flex">
-            <p><%= vehicle.category %></p>
+            <p><%= vehicle.category.upcase %></p>
           </div>
 
           <div class="card-description">

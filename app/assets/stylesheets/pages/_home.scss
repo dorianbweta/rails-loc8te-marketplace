@@ -37,6 +37,11 @@ ul {
   margin-bottom: 0rem;
 }
 
+p {
+  margin-bottom: 0rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
 @media (max-width: 767px) {
   .carousel-inner .carousel-item > div {
       display: none;
@@ -79,4 +84,17 @@ transform: translateX(0);
 .ml2 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+.container {
+  position: relative;
+  min-height: 100%vh;
+}
+
+.auto-type {
+  font-size: 60px;
+}
+
+.full-page {
+  min-height: 100vh;
 }
