@@ -13,13 +13,18 @@
 
     <hr>
   </div>
-
+    <div class=booking-page-image>
+      <%= image_tag(cl_image_path(@booking.vehicle.photos.first.key), class: "main-car myImg", style: "border-radius: 5px") %>
+    </div>
   <div class="container">
     <div class="booking-card">
       <ul>
         <li>Your vehicle will be a
-        <strong style="color: orange"><%= @booking.vehicle.category %></strong>
-        <strong style="color: orange"><%= @booking.vehicle.model %></strong> driven by
+        <a href="<%= vehicle_path(@booking.vehicle) %>" id="vehicle-link">
+          <strong style="color: orange">
+          <%= @booking.vehicle.category %>
+          <%= @booking.vehicle.model %>
+          </strong> </a> driven by
         <strong style="color: orange"><%= @booking.vehicle.driver_name %></strong>.
         </li>
         <li>Start Date: <strong style="color: orange"><%= @booking.start_date %></strong>.</li>
@@ -29,7 +34,8 @@
       </ul>
     </div>
     <div class="text-center justify-content-center my-3">
-      <p>We hope you enjoy your ride and look forward to serving you again in the future!</p>
+      <p>You will be notified via email once your driver accepts your booking.</p><br>
+      <p>We hope you enjoy your ride and look forward to serving you again in the future! </p><br>
     </div>
   </div>
 </div>
