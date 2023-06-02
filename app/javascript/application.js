@@ -4,6 +4,5 @@ import "./controllers"
 // import "./../controllers"
 import "bootstrap"
 import {carouselItem} from "./carousel"
-import "modal"
 
 carouselItem();
