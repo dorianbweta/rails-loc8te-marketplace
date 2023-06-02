@@ -99,3 +99,19 @@
   letter-spacing: 2px;
   text-align: center;
 }
+
+.button-primary-bookings {
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: $orange;
+  border-radius: 5px;
+  padding: 12px 30px;
+  font-family: Plus Jakarta Sans, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  margin: 10px 20px;
+  border: 0px;
+}
