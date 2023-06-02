@@ -6,10 +6,10 @@
   <div class="col-sm-8 my-3">
     <%= form_with url: vehicles_path, method: :get, class: "d-flex justify-content-center" do %>
       <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Search a vehicle "
-        %>
+          params[:query],
+          class: "form-control",
+          placeholder: "Search a vehicle "
+      %>
       <%= submit_tag "Search", name: "", class: "button-primary" %>
     <% end %>
   </div>

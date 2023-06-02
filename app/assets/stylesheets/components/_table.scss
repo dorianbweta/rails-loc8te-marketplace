@@ -1,0 +1,38 @@
+.table {
+  margin: 25px 0;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.table thead tr {
+  background-color: $dark-blue;
+  color: white;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.table th td {
+  padding: 16px 20px;
+  vertical-align: center;
+  text-align: left;
+  font-weight: lighter;
+  font-family: $body-font;
+  border: 1px solid black;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid $light-gray;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid $dark-blue;
+}
+
+.container-custom {
+  margin-top: 30px;
+}

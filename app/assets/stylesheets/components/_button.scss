@@ -7,7 +7,7 @@
   padding: 12px 30px;
   font-family: Plus Jakarta Sans, sans-serif;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 12px;
   transition: all 0.3s ease 0s;
   text-decoration: none;
   margin: 10px 10px;
@@ -37,4 +37,64 @@
   text-decoration: none;
   margin-left: 0px;
   color: white;
+}
+
+.accept_decline_button {
+  border: none;
+  background: transparent;
+}
+
+.button-secondary-accept {
+  color: $white;
+  background-color: $orange;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-family: Plus Jakarta Sans, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  border: 1px solid $light-gray;
+  padding: 8px 8px;
+  letter-spacing: 2px;
+
+  &:hover {
+    color: #fff;
+    background-color: $dark-blue;
+  }
+}
+
+.button-secondary-decline {
+  color: black;
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-family: Plus Jakarta Sans, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  border: 1px solid $light-gray;
+  padding: 8px 8px;
+  letter-spacing: 2px;
+
+  &:hover {
+    color: #fff;
+    background-color: red;
+  }
+}
+
+.completed-button {
+  color: white;
+  background-color: rgb(87, 167, 90);
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-family: Plus Jakarta Sans, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  text-decoration: none;
+  border: 1px solid $light-gray;
+  padding: 8px 8px;
+  letter-spacing: 2px;
+  text-align: center;
 }

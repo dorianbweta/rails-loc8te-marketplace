@@ -1,18 +1,19 @@
 <div class="container my-3">
-
-  <div class="row">
-    <div class="col-8">
-      <%= image_tag(cl_image_path(@vehicle.photos.first.key), class: "main-car") %>
-    </div>
-    <div class="col-4">
-      <%= image_tag(cl_image_path(@vehicle.photos.second.key), class: "top-car") %>
-        <%= image_tag(cl_image_path(@vehicle.photos.last.key), class: "bottom-car") %>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <%= image_tag(cl_image_path(@vehicle.photos.first.key), class: "main-car myImg") %>
+      </div>
+      <div class="col-4">
+        <%= image_tag(cl_image_path(@vehicle.photos.second.key), class: "top-car") %>
+          <%= image_tag(cl_image_path(@vehicle.photos.last.key), class: "bottom-car") %>
+      </div>
     </div>
   </div>
 
   <hr>
 
-  <h3> Find below all the information about this vehicle </h2>
+  <h3> Find below all the information about this vehicle </h3>
   <p>
     This <strong style="color: orange"><%= @vehicle.model.capitalize %></strong> is offered for rent by <strong style="color: orange"><%= @vehicle.business.organisation_name %></strong>
   </p>
@@ -35,7 +36,7 @@
 
   <div class="d-flex align-items-center justify-content-between mt-3 mb-3">
     <%= link_to "See all vehicles", vehicles_path, class: "button-primary" %>
-    <%= link_to "Book now", '#', class: "button-primary" %>
+    <%= link_to "Book now", new_vehicle_booking_path(@vehicle), class: "button-primary" %>
     <%= link_to "Delete",
         '#',
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
