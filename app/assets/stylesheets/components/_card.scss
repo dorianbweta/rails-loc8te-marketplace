@@ -66,3 +66,14 @@
   background-size: cover;
   background-position: center;
 }
+
+.booking-card {
+  background-color: $light-gray;
+  animation: ease-out;
+  transition: 0.7s;
+  border-radius: 5px;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+}

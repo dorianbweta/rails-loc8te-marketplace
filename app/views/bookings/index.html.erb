@@ -10,16 +10,13 @@
   <h1>
     Find all your bookings below!
   </h1>
-
-  <hr>
-
   </div>
 </div>
 
 <div class="container">
   <% unless current_user.business.present? %>
     <!-- code to execute if user doesn't have a business -->
-    <table class="table table-hover">
+    <table class="table table-hover vertical-align-middle">
       <caption>You have a total of <%= @bookings.count %> bookings.</caption>
       <thead class="thead-dark">
         <tr>
@@ -51,7 +48,7 @@
     </table>
   <% end %>
 
-  <table class="table table-hover">
+  <table class="table table-hover vertical-align-middle">
     <caption>You have a total of <%= @requests.count %> requests.</caption>
     <thead class="thead-dark">
       <tr>
@@ -80,16 +77,16 @@
           <td><%= request.status %></td>
           <td>
             <% if request.status.downcase == "pending" %>
-              <div class="d-flex">
+              <div class="d-flex align-center justify-content-center">
                 <%=
-                button_to "✅", booking_path(request.id, status: "Accepted"), method: :patch, class: "accept_decline_button"
+                button_to "Accept", booking_path(request.id, status: "Accepted"), method: :patch, class: "button-secondary-accept"
                 %>
                 <%=
-                  button_to "❌", booking_path(request.id, status: "Declined"), method: :patch, class: "accept_decline_button"
+                  button_to "Decline", booking_path(request.id, status: "Declined"), method: :patch, class: "button-secondary-decline"
                 %>
               </div>
             <% else %>
-              <p>Done</p>
+              <p class="completed-button">Done</p>
             <% end %>
           </td>
         </tr>
