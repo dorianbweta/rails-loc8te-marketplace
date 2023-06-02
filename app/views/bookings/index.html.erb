@@ -1,0 +1,99 @@
+<div class="container-custom">
+  <div class="d-flex align-items-center justify-content-center">
+  <h1>
+    Hey
+    <strong style="color: orange"><%= current_user.first_name.capitalize %></strong>
+    <strong style="color: orange"><%= current_user.last_name.capitalize %></strong>
+  </h1>
+  </div>
+  <div class="d-flex align-items-center justify-content-center">
+  <h1>
+    Find all your bookings below!
+  </h1>
+
+  <hr>
+
+  </div>
+</div>
+
+<div class="container">
+  <% unless current_user.business.present? %>
+    <!-- code to execute if user doesn't have a business -->
+    <table class="table table-hover">
+      <caption>You have a total of <%= @bookings.count %> bookings.</caption>
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Category</th>
+          <th scope="col">Model</th>
+          <th scope="col">Driver</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+          <th scope="col">Total Price</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @bookings.each do |booking| %>
+        <% count = 0 %>
+          <tr>
+            <th scope="row"><%= booking.id %></th>
+            <td><%= booking.vehicle.category %></td>
+            <td><%= booking.vehicle.model %></td>
+            <td><%= booking.vehicle.driver_name %></td>
+            <td><%= booking.start_date %></td>
+            <td><%= booking.end_date %></td>
+            <td><%= booking.total_price %> $</td>
+            <td><%= booking.status %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
+  <table class="table table-hover">
+    <caption>You have a total of <%= @requests.count %> requests.</caption>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Category</th>
+        <th scope="col">Model</th>
+        <th scope="col">Driver</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Total Price</th>
+        <th scope="col">Status</th>
+        <th scope="col">Approval</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @requests.each do |request| %>
+      <% count = 0 %>
+        <tr>
+          <th scope="row"><%= request.id %></th>
+          <td><%= request.vehicle.category %></td>
+          <td><%= request.vehicle.model %></td>
+          <td><%= request.vehicle.driver_name %></td>
+          <td><%= request.start_date %></td>
+          <td><%= request.end_date %></td>
+          <td><%= request.total_price %> $</td>
+          <td><%= request.status %></td>
+          <td>
+            <% if request.status.downcase == "pending" %>
+              <div class="d-flex">
+                <%=
+                button_to "✅", booking_path(request.id, status: "Accepted"), method: :patch, class: "accept_decline_button"
+                %>
+                <%=
+                  button_to "❌", booking_path(request.id, status: "Declined"), method: :patch, class: "accept_decline_button"
+                %>
+              </div>
+            <% else %>
+              <p>Done</p>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

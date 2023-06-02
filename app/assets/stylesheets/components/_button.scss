@@ -7,7 +7,7 @@
   padding: 12px 30px;
   font-family: Plus Jakarta Sans, sans-serif;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 12px;
   transition: all 0.3s ease 0s;
   text-decoration: none;
   margin: 10px 10px;
@@ -37,4 +37,9 @@
   text-decoration: none;
   margin-left: 0px;
   color: white;
+}
+
+.accept_decline_button {
+  border: none;
+  background: transparent;
 }
