@@ -46,51 +46,53 @@
         <% end %>
       </tbody>
     </table>
-  <% end %>
 
-  <table class="table table-hover vertical-align-middle">
-    <caption>You have a total of <%= @requests.count %> requests.</caption>
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Category</th>
-        <th scope="col">Model</th>
-        <th scope="col">Driver</th>
-        <th scope="col">Start Date</th>
-        <th scope="col">End Date</th>
-        <th scope="col">Total Price</th>
-        <th scope="col">Status</th>
-        <th scope="col">Approval</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @requests.each do |request| %>
-      <% count = 0 %>
-        <tr>
-          <th scope="row"><%= request.id %></th>
-          <td><%= request.vehicle.category %></td>
-          <td><%= request.vehicle.model %></td>
-          <td><%= request.vehicle.driver_name %></td>
-          <td><%= request.start_date %></td>
-          <td><%= request.end_date %></td>
-          <td><%= request.total_price %> $</td>
-          <td><%= request.status %></td>
-          <td>
-            <% if request.status.downcase == "pending" %>
-              <div class="d-flex align-center justify-content-center">
-                <%=
-                button_to "Accept", booking_path(request.id, status: "Accepted"), method: :patch, class: "button-secondary-accept"
-                %>
-                <%=
-                  button_to "Decline", booking_path(request.id, status: "Declined"), method: :patch, class: "button-secondary-decline"
-                %>
-              </div>
-            <% else %>
-              <p class="completed-button">Done</p>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <% else %>
+      <table class="table table-hover vertical-align-middle">
+        <caption>You have a total of <%= @requests.count %> requests.</caption>
+        <thead class="thead-dark">
+          <tr>
+
+            <th scope="col">Id</th>
+            <th scope="col">Category</th>
+            <th scope="col">Model</th>
+            <th scope="col">Driver</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Total Price</th>
+            <th scope="col">Status</th>
+            <th scope="col">Approval</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @requests.each do |request| %>
+          <% count = 0 %>
+            <tr>
+              <th scope="row"><%= request.id %></th>
+              <td><%= request.vehicle.category %></td>
+              <td><%= request.vehicle.model %></td>
+              <td><%= request.vehicle.driver_name %></td>
+              <td><%= request.start_date %></td>
+              <td><%= request.end_date %></td>
+              <td><%= request.total_price %> $</td>
+              <td><%= request.status %></td>
+              <td>
+                <% if request.status.downcase == "pending" %>
+                  <div class="d-flex align-center justify-content-center">
+                    <%=
+                    button_to "Accept", booking_path(request.id, status: "Accepted"), method: :patch, class: "button-secondary-accept"
+                    %>
+                    <%=
+                      button_to "Decline", booking_path(request.id, status: "Declined"), method: :patch, class: "button-secondary-decline"
+                    %>
+                  </div>
+                <% else %>
+                  <p class="completed-button">Done</p>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  <% end %>
 </div>

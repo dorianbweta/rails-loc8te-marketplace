@@ -37,10 +37,10 @@
   <div class="d-flex align-items-center justify-content-between mt-3 mb-3">
     <%= link_to "See all vehicles", vehicles_path, class: "button-primary" %>
     <%= link_to "Book now", new_vehicle_booking_path(@vehicle), class: "button-primary" %>
-    <%= link_to "Delete",
-        '#',
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-        class: "button-primary"
+    <%= link_to "Delete vehicle",
+      vehicle_path(@vehicle),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+      class: "button-primary"
     %>
   </div>
 

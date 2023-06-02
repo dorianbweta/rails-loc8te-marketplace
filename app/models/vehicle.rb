@@ -9,4 +9,6 @@ class Vehicle < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     };
+
+  validates :photos, length: { minimum: 3, message: "Please upload at least 3 photos" }
 end

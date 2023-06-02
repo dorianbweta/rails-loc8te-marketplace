@@ -1,7 +1,7 @@
 class VehiclesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_vehicle, only: %i[show edit update]
-  
+  before_action :set_vehicle, only: %i[show edit update destroy]
+
   def index
     @vehicles = Vehicle.all
     if params[:query].present?
@@ -39,6 +39,11 @@ class VehiclesController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @vehicle.destroy
+    redirect_to vehicles_path, status: :see_other
   end
 
   private
