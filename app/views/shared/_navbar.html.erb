@@ -7,6 +7,12 @@
     <div class="navbar">
       <ul class="nav-links">
         <li>
+        <%= link_to root_path %>
+        <% if user_signed_in? && current_user.business.nil? %>
+          <%= link_to "Register your Business", new_business_path, class:"nav-links"%>
+        <% end %>
+        </li>
+        <li>
         <% link_to root_path %>
         <% if user_signed_in? && current_user.business.present? %>
           <%= link_to "Submit a Vehicle", new_vehicle_path, class:"nav-links"%>
