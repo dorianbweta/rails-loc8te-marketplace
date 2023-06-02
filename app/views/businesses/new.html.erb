@@ -1,0 +1,23 @@
+<div class="container my-4">
+  <div class="form-info">
+    <div class="d-flex align-items-center justify-content-center my-3">
+    <h1>Create a new business</h1>
+    </div>
+
+    <hr>
+
+    <%= simple_form_for [@business] do |f| %>
+      <%= f.input :organisation_name, input_html: { class: "w-100" } %>
+      <%= f.input :tax_number, input_html: { class: "w-100" } %>
+      <%= f.input :address, input_html: { class: "w-100" } %>
+      <div class="d-flex align-items-center justify-content-center my-3">
+        <%= f.submit "Create", class: "button-primary" %>
+      </div>
+    <% end %>
+
+    <div class="d-flex align-items-center justify-content-center">
+      <p><%= link_to "Cancel creation", root_path %></p>
+    </div>
+
+  </div>
+</div>

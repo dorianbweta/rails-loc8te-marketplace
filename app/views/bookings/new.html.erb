@@ -6,7 +6,6 @@
 
     <hr>
 
-
     <%= simple_form_for [@vehicle, @booking] do |f| %>
       <div class="d-flex justify-content-center">
         <%= f.input :start_date, as: :date, html5: true %>
@@ -16,8 +15,9 @@
       <%= f.submit "Submit booking", class: "button-primary" %>
       </div>
     <% end %>
+
     <div class="d-flex align-items-center justify-content-end">
-      <p><%= link_to "Cancel booking", vehicles_path %></p>
+      <p><%= link_to "Cancel booking", vehicle_path(@vehicle) %></p>
     </div>
 
   </div>
