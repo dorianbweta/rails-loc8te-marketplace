@@ -96,5 +96,6 @@ transform: translateX(0);
 }
 
 .full-page {
-  min-height: 100vh;
+  height: calc(100vh - 150px);
+
 }
