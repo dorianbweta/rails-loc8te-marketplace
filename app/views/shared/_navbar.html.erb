@@ -7,6 +7,12 @@
     <div class="navbar">
       <ul class="nav-links">
         <li>
+        <% link_to root_path %>
+        <% if user_signed_in? && current_user.business.present? %>
+          <%= link_to "Submit a Vehicle", new_vehicle_path, class:"nav-links"%>
+        <% end %>
+        </li>
+        <li>
         <%= link_to root_path %>
         <% if user_signed_in? %>
           <%= link_to "My bookings", bookings_path, class:"nav-links"%>
@@ -14,9 +20,6 @@
         </li>
         <li>
         <%= link_to "Vehicles", vehicles_path, class:"nav-links"%>
-        </li>
-        <li>
-        <%= link_to "Submit your Vehicle", new_vehicle_path, class:"nav-links"%>
         </li>
       </ul>
 
