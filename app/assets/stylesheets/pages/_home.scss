@@ -39,6 +39,7 @@ ul {
 
 p {
   margin-bottom: 0rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -92,4 +93,8 @@ transform: translateX(0);
 
 .auto-type {
   font-size: 60px;
+}
+
+.full-page {
+  min-height: 100vh;
 }
