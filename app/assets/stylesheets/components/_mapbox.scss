@@ -12,3 +12,14 @@
 .full-height {
   height: 80vh;
 }
+
+.mapboxgl-marker:hover {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.popup-header {
+  color: $orange;
+  line-height: 12px;
+  font-family: Plus Jakarta Sans, sans-serif;
+}
